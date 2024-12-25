@@ -17,6 +17,7 @@ export default function Layout() {
         headerTitleStyle: {
           fontWeight: "bold",
         },
+        navigationBarColor: Colors.light.background,
       }}>
       <Stack.Screen name="(tabs)" options={{ title: "Feedify" }} />
     </Stack>
