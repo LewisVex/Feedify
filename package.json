@@ -19,6 +19,7 @@
     "@react-navigation/bottom-tabs": "^7.0.0",
     "@react-navigation/drawer": "^7.0.19",
     "@react-navigation/native": "^7.0.0",
+    "axios": "^1.7.9",
     "babel-plugin-inline-import": "^3.0.0",
     "drizzle-orm": "^0.37.0",
     "expo": "~52.0.11",
