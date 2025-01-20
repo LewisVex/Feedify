@@ -23,9 +23,21 @@ export default function TabsLayout() {
           title: "Home",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <Ionicons name="home-sharp" size={24} color={color} />
+              <Ionicons name="home" size={24} color={color} />
             ) : (
               <Ionicons name="home-outline" size={24} color={color} />
+            ),
+        }}
+      />
+      <Tabs.Screen
+        name="posts"
+        options={{
+          title: "Posts",
+          tabBarIcon: ({ color, focused }) =>
+            focused ? (
+              <Ionicons name="albums" size={24} color={color} />
+            ) : (
+              <Ionicons name="albums-outline" size={24} color={color} />
             ),
         }}
       />
@@ -35,7 +47,7 @@ export default function TabsLayout() {
           title: "Settings",
           tabBarIcon: ({ color, focused }) =>
             focused ? (
-              <Ionicons name="settings-sharp" size={24} color={color} />
+              <Ionicons name="settings" size={24} color={color} />
             ) : (
               <Ionicons name="settings-outline" size={24} color={color} />
             ),
