@@ -20,6 +20,7 @@ export default function Layout() {
         navigationBarColor: Colors.light.background,
       }}>
       <Stack.Screen name="(tabs)" options={{ title: "Feedify" }} />
+      <Stack.Screen name="(posts)" options={{ headerShown: false }} />
     </Stack>
   );
 }
