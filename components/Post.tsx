@@ -1,7 +1,7 @@
 import axios from "@/axios-setup";
 import { Link } from "expo-router";
 import { useEffect, useState } from "react";
-import { Text, TouchableOpacity } from "react-native";
+import { Pressable, Text } from "react-native";
 
 type Props = {
   post: Post;
@@ -32,7 +32,7 @@ export default function PostItem({ post }: Props) {
 
     axios
       .get(`/users/${post.authorId}`)
-      .then((res) => setAuthor(res.data[0]))
+      .then((res) => setAuthor(res.data))
       .catch((err) => console.error(err));
   }, [post.authorId]);
 
@@ -40,13 +40,13 @@ export default function PostItem({ post }: Props) {
     <Link
       asChild
       href={{
-        pathname: "/(posts)/[id]",
+        pathname: "/(details)/posts/[id]",
         params: { id: post.id },
       }}>
-      <TouchableOpacity className="flex flex-col justify-start items-start p-4 rounded-lg">
+      <Pressable className="flex flex-col justify-start items-start p-4 rounded-lg border border-transparent active:opacity-70 active:border-white/30">
         <Text className="text-white/60">@{author?.username}</Text>
         <Text className="text-white font-bold text-lg">{post.title}</Text>
-      </TouchableOpacity>
+      </Pressable>
     </Link>
   );
 }
