@@ -16,10 +16,8 @@ export default function TabPosts() {
     setLoading(true);
     axios
       .get("/posts")
-      .then((res) => {
-        setData(res.data);
-        setLoading(false);
-      })
+      .then((res) => setData(res.data))
+      .finally(() => setLoading(false))
       .catch((err) => console.error(err));
   };
 
