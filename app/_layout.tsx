@@ -2,13 +2,12 @@ import "@/styles/global.css";
 
 import { Colors } from "@/constants/Colors";
 import { Stack } from "expo-router/stack";
-import { View } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function Layout() {
   return (
-    <View
-      className="flex-1"
-      style={{ backgroundColor: Colors.light.background }}>
+    <GestureHandlerRootView
+      style={{ flex: 1, backgroundColor: Colors.light.background }}>
       <Stack
         screenOptions={{
           statusBarBackgroundColor: Colors.light.tint,
@@ -25,6 +24,6 @@ export default function Layout() {
         }}>
         <Stack.Screen name="(tabs)" options={{ title: "Feedify" }} />
       </Stack>
-    </View>
+    </GestureHandlerRootView>
   );
 }
